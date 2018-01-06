@@ -1,12 +1,16 @@
 # superslide.js
 
-A flexible, smooth, GPU accelerated sliding menu for your next PWA. The library makes use of promises that resolve when a particular action completes. It is lightweight and easy to use.
+A flexible, smooth, GPU accelerated sliding menu for your next PWA. Makes use of promises and very lightweight.
 
-superslide.js was created by the Bx team at OSREC Technologies. The library was developed as part of our business and project management app called Bx ([you can check it out here](https://usebx.com)).
+Created by the [Bx team](https://usebx.com) at [OSREC Technologies](https://osrec.co.uk). 
 
-A pro version, with more animations is available at [https://osrec.co.uk/products/superslidejs]
+![alt text](https://www.usebx.com/web/img/Bx64.png "Bx")
 
-We'd love to hear about where you've used superslide.js! Drop us a note via https://osrec.co.uk and let us know (it makes our devs really happy) :) 
+The library was developed as part of our business and project management app called Bx ([you can check it out here](https://usebx.com)).
+
+A pro version, with more animations is available at [https://osrec.co.uk/products/superslidejs]. 
+
+Enjoy :)
 
 ## Quickstart
 
