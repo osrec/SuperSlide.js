@@ -8,7 +8,9 @@ Created by the [Bx team](https://usebx.com) at [OSREC Technologies](https://osre
 
 The library was developed as part of our business and project management app called Bx ([you can check it out here](https://usebx.com)).
 
-A pro version, with more animations is available at [https://osrec.co.uk/products/superslidejs]. 
+Live Demo: https://osrec.github.io/superslide.js/demo.html
+
+A pro version, with more animations is available at https://osrec.co.uk/products/superslidejs
 
 Enjoy :)
 
