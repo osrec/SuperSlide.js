@@ -1,6 +1,6 @@
 # superslide.js
 
-<img src="https://osrec.co.uk/osrec-website/resources/img/superSlideJsLogo.svg" alt="superslide.js logo" style="width: 200px;"/>
+![](https://osrec.co.uk/osrec-website/resources/img/superSlideJsLogo.svg | width=150)
 
 A flexible, smooth, GPU accelerated sliding menu for your next PWA. Makes use of promises and very lightweight.
 
