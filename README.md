@@ -1,12 +1,12 @@
 # superslide.js
 
-![alt text](https://osrec.github.io/superslide.js/logo.png "SuperSlide.js logo")
+![SuperSlide.js Logo](https://osrec.github.io/superslide.js/logo.png)
 
 A flexible, smooth, GPU accelerated sliding menu for your next PWA. Makes use of promises and very lightweight.
 
 Created by the [Bx team](https://usebx.com) at [OSREC Technologies](https://osrec.co.uk). 
 
-![alt text](https://www.usebx.com/web/img/Bx64.png "Bx")
+![Bx](https://www.usebx.com/web/img/Bx64.png)
 
 The library was developed as part of our business and project management app called Bx ([you can check it out here](https://usebx.com)).
 
