@@ -1,0 +1,29 @@
+{
+  "name": "superslide.js",
+  "version": "1.0.0",
+  "description": "A lightweight, slick sliding menu for your next PWA by OSREC Technologies (https://osrec.co.uk)",
+  "main": "superslide-std.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osrec/superslide.js.git"
+  },
+  "keywords": [
+    "sliding",
+    "menu",
+    "pwa",
+    "responsive",
+    "app",
+    "webapp",
+    "web",
+    "app"
+  ],
+  "author": "OSREC Technologies",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/osrec/superslide.js/issues"
+  },
+  "homepage": "https://github.com/osrec/superslide.js#readme"
+}

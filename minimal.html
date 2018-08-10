@@ -1,11 +1,13 @@
 <html>
 
 	<head>
-		<script src='superslide.min.js'></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<script src='superslide-std.js'></script>
 	</head>
 
 	<script>
-		
+
 		window.onload = function()
 		{
 			myMenu = new OSREC.superslide(
@@ -13,23 +15,23 @@
 				slider: document.getElementById('menu'),
 				content: document.getElementById('content'),
 				animation: 'slideLeft'
-				
+
 			});
-			
+
 			var p = myMenu.open();
 		};
-		
+
 	</script>
-	
+
 	<style>
 		body 		{ padding: 0px; margin: 0px; }
 		#menu 		{ background: #ccc; }
 		#content 	{ min-height: 100vh; min-width: 100vw; }
 	</style>
-	
+
 	<body>
 		<div id='content'>Content</div>
 		<div id='menu'>Menu</div>
 	</body>
-	
+
 </html>

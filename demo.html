@@ -3,22 +3,22 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<script src='superslide.min.js'></script>
+		<script src='superslide-std.js'></script>
 		<title>superslide.js</title>
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Heebo:300,500" rel="stylesheet" />
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
 	</head>
 
 	<style>
-		#menuContainer 		
+		#menuContainer
 		{ background: #eee; box-shadow: 0px 10px 10px 2px rgba(0,0,0,0.2)}
-		
-		
+
+
 		body
-		{ 
+		{
 			background: url('https://images.pexels.com/photos/131634/pexels-photo-131634.jpeg?h=350&auto=compress&cs=tinysrgb');
-			background-size: cover; 
-			background-repeat: no-repeat; 
+			background-size: cover;
+			background-repeat: no-repeat;
 			background-position: center center;
 			font-family: 'Heebo', sans-serif;
 			padding: 0px;
@@ -27,24 +27,24 @@
 			background: #fff;
 			background: linear-gradient(#eee 0%, #fff 100%);
 		}
-			
+
 		.navlink
 		{ padding: 20px 15px;	}
-				
-		
+
+
 	</style>
 
 	<script>
-		
+
 		window.onerror = function(msg, url, linenumber)
 		{
 			alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
 			return true;
 		};
-		
+
 		window.onload = function()
 		{
-		
+
 			superslideMenu = new OSREC.superslide(
 			{
 				slider: 					document.getElementById('menuContainer'),
@@ -58,32 +58,32 @@
 				width: 						'60vw',
 				height:						'50vh'
 			});
-			
+
 			console.log(superslideMenu);
-			
+
 			var p = superslideMenu.open();
 			console.log(p);
-			
-			
+
+
 		};
-		
+
 	</script>
 
 	<body>
-		
+
 		<div id='content' style='color: #fff; min-height: 100vh;'>
-			
+
 			<div style='font-size: 25px; padding: 15px; display: flex; align-items: center; background: #222; color: #eee;'>
-				<i class='fa fa-bars' onclick='superslideMenu.toggle()'></i>
+				<i class='fa fa-bars' style='cursor: pointer' onclick='superslideMenu.toggle()'></i>
 				<div style='margin-left: 15px; flex: 1'>My Wallet</div>
 				<i class='fa fa-search'></i>
 				<i class='fa fa-heart-o' style='margin-left: 15px;'></i>
 			</div>
-			
+
 			<div style='color: #333;'>
-				
+
 				<div style='display: flex; align-items: center; font-size: 14px; border-bottom: 1px solid rgba(0,0,0,0.1); padding: 15px;'>
-					
+
 					<div style='padding: 8px; border-radius: 8px; background: #00cc00; margin-right: 15px;'></div>
 					<div style='flex: 1; padding-right: 10px;'>
 						<div style='padding-bottom: 2px;'>Groceries</div>
@@ -91,11 +91,11 @@
 					</div>
 					<div style='font-size: 20px;'>$31.99</div>
 					<i class='fa fa-chevron-right' style='margin-left: 10px;'></i>
-					
+
 				</div>
-				
+
 				<div style='display: flex; align-items: center; font-size: 14px; border-bottom: 1px solid rgba(0,0,0,0.1); padding: 15px;'>
-					
+
 					<div style='padding: 8px; border-radius: 8px; background: #F9D210; margin-right: 15px;'></div>
 					<div style='flex: 1; padding-right: 10px;'>
 						<div style='padding-bottom: 2px;'>Haircut</div>
@@ -103,11 +103,11 @@
 					</div>
 					<div style='font-size: 20px;'>$20.00</div>
 					<i class='fa fa-chevron-right' style='margin-left: 10px;'></i>
-					
+
 				</div>
-				
+
 				<div style='display: flex; align-items: center; font-size: 14px; border-bottom: 1px solid rgba(0,0,0,0.1); padding: 15px;'>
-					
+
 					<div style='padding: 8px; border-radius: 8px; background: #FF7A61; margin-right: 15px;'></div>
 					<div style='flex: 1; padding-right: 10px;'>
 						<div style='padding-bottom: 2px;'>Bus Ticket</div>
@@ -115,11 +115,11 @@
 					</div>
 					<div style='font-size: 20px;'>$11.50</div>
 					<i class='fa fa-chevron-right' style='margin-left: 10px;'></i>
-					
+
 				</div>
-				
+
 				<div style='display: flex; align-items: center; font-size: 14px; border-bottom: 1px solid rgba(0,0,0,0.1); padding: 15px;'>
-					
+
 					<div style='padding: 8px; border-radius: 8px; background: #FF7A61; margin-right: 15px;'></div>
 					<div style='flex: 1; padding-right: 10px;'>
 						<div style='padding-bottom: 2px;'>Virgin LHR to SFO</div>
@@ -127,11 +127,11 @@
 					</div>
 					<div style='font-size: 20px;'>$950.38</div>
 					<i class='fa fa-chevron-right' style='margin-left: 10px;'></i>
-					
+
 				</div>
-				
+
 				<div style='display: flex; align-items: center; font-size: 14px; border-bottom: 1px solid rgba(0,0,0,0.1); padding: 15px;'>
-					
+
 					<div style='padding: 8px; border-radius: 8px; background: #67BCDD; margin-right: 15px;'></div>
 					<div style='flex: 1; padding-right: 10px;'>
 						<div style='padding-bottom: 2px;'>Dry Cleaning</div>
@@ -139,11 +139,11 @@
 					</div>
 					<div style='font-size: 20px;'>$15.00</div>
 					<i class='fa fa-chevron-right' style='margin-left: 10px;'></i>
-					
+
 				</div>
-				
+
 				<div style='display: flex; align-items: center; font-size: 14px; border-bottom: 1px solid rgba(0,0,0,0.1); padding: 15px;'>
-					
+
 					<div style='padding: 8px; border-radius: 8px; background: #FF18EA; margin-right: 15px;'></div>
 					<div style='flex: 1; padding-right: 10px;'>
 						<div style='padding-bottom: 2px;'>Dentist</div>
@@ -151,13 +151,13 @@
 					</div>
 					<div style='font-size: 20px;'>$134.00</div>
 					<i class='fa fa-chevron-right' style='margin-left: 10px;'></i>
-					
+
 				</div>
-				
+
 			</div>
-			
+
 		</div>
-		
+
 		<div id='menuContainer'>
 			<div>
 				<!--button onclick='superslideMenu.close()'>Close</button-->
@@ -172,7 +172,7 @@
 		</div>
 
 	</body>
-	
-	
+
+
 
 </html>
