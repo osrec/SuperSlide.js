@@ -1,10 +1,10 @@
 # SuperSlide.js
 
-<img src='logo.png' style='width: 200px'>
+<img src='logo.png' width='200'>
 
 A lightweight, configurable sliding menu for your next PWA with promises. Only 2k gzipped!
 
-<img src='gifs/demo.gif' style='width: 200px'>
+<img src='gifs/demo.gif' width='200'>
 
 This library aims to provide a highly configurable, ready-to-use sliding menu for your next web application, while delivering native-like animation performance. It was created by the [OSREC Technologies](https://`OSREC.co.uk) while developing [Bx, our invoicing, time-tracking and project management PWA](https://usebx.com).
 
@@ -42,23 +42,23 @@ var myMenu = new OSREC.superslide
 var openPromise = myMenu.open();
 ```
 
-[Try the demo here]()
+**[Try the demo here](https://osrec.github.io/SuperSlide.js/demo.html)**
 
 # Animations
 
 Standard Version has 4 animation options available:
 
 ### slideLeft
-<img src='gifs/slideLeft.webm.gif' style='width: 50px'>
+<img src='gifs/slideLeft.webm.gif' width='50'>
 
 ### slideRight
-<img src='gifs/slideRight.webm.gif' style='width: 50px'>
+<img src='gifs/slideRight.webm.gif' width='50'>
 
 ### slideBottom
-<img src='gifs/slideBottom.webm.gif' style='width: 50px'>
+<img src='gifs/slideBottom.webm.gif' width='50'>
 
 ### slideTop
-<img src='gifs/slideTop.webm.gif' style='width: 50px'>
+<img src='gifs/slideTop.webm.gif' width='50'>
 
 ### PRO version :star: contains many more menu animations (check it out @ https://osrec.co.uk/products/superslidejs)
 
