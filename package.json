@@ -1,6 +1,6 @@
 {
   "name": "superslide.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight, slick sliding menu for your next PWA by OSREC Technologies (https://osrec.co.uk)",
   "main": "superslide-std.js",
   "scripts": {

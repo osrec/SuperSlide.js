@@ -106,6 +106,9 @@ Executed before the menu begins to close
 - `onClose` (`callback`):
 Executed as soon as the menu has closed
 
+- `onDrag` (`completion`, `callback`):
+Executed as the menu is being dragged; returns percentage completion
+
 # Methods
 
 - `OSREC.superslide.open()`
