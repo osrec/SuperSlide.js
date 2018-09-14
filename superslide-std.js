@@ -37,7 +37,7 @@ OSREC.superslide = function (p) {
 	me.p.onOpen = typeof me.p.onOpen == 'function' ? me.p.onOpen : function () {};
 	me.p.beforeClose = typeof me.p.beforeClose == 'function' ? me.p.beforeClose : function () {};
 	me.p.onClose = typeof me.p.onClose == 'function' ? me.p.onClose : function () {};
-    me.p.onDrag = typeof me.p.onDrag == 'function' ? me.p.onDrag : function () {};
+	me.p.onDrag = typeof me.p.onDrag == 'function' ? me.p.onDrag : function () {};
 
 	me.body = document;
 	me.p.isOpen = false;
@@ -102,7 +102,7 @@ OSREC.superslide = function (p) {
 					var sliderStartPosition = me.p.isOpen ? me.p.slider.offsetWidth : 0;
 					var translation = 0;
 					var delta = 0;
-                    var completion = 0;
+					var completion = 0;
 
 					var touchMoveFunction = function (e) {
 
@@ -116,15 +116,15 @@ OSREC.superslide = function (p) {
 							translation = 0;
 						}
 
-                        if (delta >= me.p.slider.offsetWidth) {
-                            completion = 1;
-                        } else if (delta <= 0) {
-                            completion = 0;
-                        } else {
-                            completion = delta / me.p.slider.offsetWidth;
-                        }
+						if (delta >= me.p.slider.offsetWidth) {
+							completion = 1;
+						} else if (delta <= 0) {
+							completion = 0;
+						} else {
+							completion = delta / me.p.slider.offsetWidth;
+						}
 
-                        me.p.onDrag(completion);
+						me.p.onDrag(completion);
 
 						me.p.slider.style.transform = `translate3d(${translation}px, 0, 0)`;
 						if (me.p.slideContent) {
@@ -179,7 +179,7 @@ OSREC.superslide = function (p) {
 					var sliderStartPosition = me.p.isOpen ? -me.p.slider.offsetWidth : 0;
 					var translation = 0;
 					var delta = 0;
-                    var completion = 0;
+					var completion = 0;
 
 					var touchMoveFunction = function (e) {
 
@@ -193,15 +193,15 @@ OSREC.superslide = function (p) {
 							translation = 0;
 						}
 
-                        if ((delta * -1) >= me.p.slider.offsetWidth) {
-                            completion = 1;
-                        } else if ((delta * -1) <= 0) {
-                            completion = 0;
-                        } else {
-                            completion = (delta * -1) / me.p.slider.offsetWidth;
-                        }
+						if ((delta * -1) >= me.p.slider.offsetWidth) {
+							completion = 1;
+						} else if ((delta * -1) <= 0) {
+							completion = 0;
+						} else {
+							completion = (delta * -1) / me.p.slider.offsetWidth;
+						}
 
-                        me.p.onDrag(completion);
+						me.p.onDrag(completion);
 
 						me.p.slider.style.transform = `translate3d(${translation}px, 0, 0)`;
 						if (me.p.slideContent) {
