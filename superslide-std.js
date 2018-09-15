@@ -37,6 +37,7 @@ OSREC.superslide = function (p) {
 	me.p.onOpen = typeof me.p.onOpen == 'function' ? me.p.onOpen : function () {};
 	me.p.beforeClose = typeof me.p.beforeClose == 'function' ? me.p.beforeClose : function () {};
 	me.p.onClose = typeof me.p.onClose == 'function' ? me.p.onClose : function () {};
+	me.p.onDrag = typeof me.p.onDrag == 'function' ? me.p.onDrag : function () {};
 
 	me.body = document;
 	me.p.isOpen = false;
@@ -98,21 +99,33 @@ OSREC.superslide = function (p) {
 					me.p.content.style.transition = 'none';
 					me.p.slider.style.transition = 'none';
 
-					var sliderStartPosition = me.p.isOpen ? me.p.slider.offsetWidth : 0;
+					var sliderOffsetWidth = me.p.slider.offsetWidth;
+					var sliderStartPosition = me.p.isOpen ? sliderOffsetWidth : 0;
 					var translation = 0;
 					var delta = 0;
+					var completion = 0;
 
 					var touchMoveFunction = function (e) {
 
 						delta = e.changedTouches[0].clientX - startX;
 						translation = sliderStartPosition + delta;
 
-						if (translation > me.p.slider.offsetWidth) {
-							translation = me.p.slider.offsetWidth;
+						if (translation > sliderOffsetWidth) {
+							translation = sliderOffsetWidth;
 						}
 						if (translation < 0) {
 							translation = 0;
 						}
+
+						if (delta >= sliderOffsetWidth) {
+							completion = 1;
+						} else if (delta <= 0) {
+							completion = 0;
+						} else {
+							completion = delta / sliderOffsetWidth;
+						}
+
+						me.p.onDrag(completion);
 
 						me.p.slider.style.transform = `translate3d(${translation}px, 0, 0)`;
 						if (me.p.slideContent) {
@@ -164,21 +177,33 @@ OSREC.superslide = function (p) {
 					me.p.content.style.transition = 'none';
 					me.p.slider.style.transition = 'none';
 
-					var sliderStartPosition = me.p.isOpen ? -me.p.slider.offsetWidth : 0;
+					var sliderOffsetWidth = me.p.slider.offsetWidth;
+					var sliderStartPosition = me.p.isOpen ? -sliderOffsetWidth : 0;
 					var translation = 0;
 					var delta = 0;
+					var completion = 0;
 
 					var touchMoveFunction = function (e) {
 
 						delta = e.changedTouches[0].clientX - startX;
 						translation = sliderStartPosition + delta;
 
-						if (translation < -me.p.slider.offsetWidth) {
-							translation = -me.p.slider.offsetWidth;
+						if (translation < -sliderOffsetWidth) {
+							translation = -sliderOffsetWidth;
 						}
 						if (translation > 0) {
 							translation = 0;
 						}
+
+						if ((delta * -1) >= sliderOffsetWidth) {
+							completion = 1;
+						} else if ((delta * -1) <= 0) {
+							completion = 0;
+						} else {
+							completion = (delta * -1) / sliderOffsetWidth;
+						}
+
+						me.p.onDrag(completion);
 
 						me.p.slider.style.transform = `translate3d(${translation}px, 0, 0)`;
 						if (me.p.slideContent) {
