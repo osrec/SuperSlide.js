@@ -99,7 +99,8 @@ OSREC.superslide = function (p) {
 					me.p.content.style.transition = 'none';
 					me.p.slider.style.transition = 'none';
 
-					var sliderStartPosition = me.p.isOpen ? me.p.slider.offsetWidth : 0;
+					var sliderOffsetWidth = me.p.slider.offsetWidth;
+					var sliderStartPosition = me.p.isOpen ? sliderOffsetWidth : 0;
 					var translation = 0;
 					var delta = 0;
 					var completion = 0;
@@ -109,19 +110,19 @@ OSREC.superslide = function (p) {
 						delta = e.changedTouches[0].clientX - startX;
 						translation = sliderStartPosition + delta;
 
-						if (translation > me.p.slider.offsetWidth) {
-							translation = me.p.slider.offsetWidth;
+						if (translation > sliderOffsetWidth) {
+							translation = sliderOffsetWidth;
 						}
 						if (translation < 0) {
 							translation = 0;
 						}
 
-						if (delta >= me.p.slider.offsetWidth) {
+						if (delta >= sliderOffsetWidth) {
 							completion = 1;
 						} else if (delta <= 0) {
 							completion = 0;
 						} else {
-							completion = delta / me.p.slider.offsetWidth;
+							completion = delta / sliderOffsetWidth;
 						}
 
 						me.p.onDrag(completion);
@@ -176,7 +177,8 @@ OSREC.superslide = function (p) {
 					me.p.content.style.transition = 'none';
 					me.p.slider.style.transition = 'none';
 
-					var sliderStartPosition = me.p.isOpen ? -me.p.slider.offsetWidth : 0;
+					var sliderOffsetWidth = me.p.sliderOffsetWidth;
+					var sliderStartPosition = me.p.isOpen ? -sliderOffsetWidth : 0;
 					var translation = 0;
 					var delta = 0;
 					var completion = 0;
@@ -186,19 +188,19 @@ OSREC.superslide = function (p) {
 						delta = e.changedTouches[0].clientX - startX;
 						translation = sliderStartPosition + delta;
 
-						if (translation < -me.p.slider.offsetWidth) {
-							translation = -me.p.slider.offsetWidth;
+						if (translation < -sliderOffsetWidth) {
+							translation = -sliderOffsetWidth;
 						}
 						if (translation > 0) {
 							translation = 0;
 						}
 
-						if ((delta * -1) >= me.p.slider.offsetWidth) {
+						if ((delta * -1) >= sliderOffsetWidth) {
 							completion = 1;
 						} else if ((delta * -1) <= 0) {
 							completion = 0;
 						} else {
-							completion = (delta * -1) / me.p.slider.offsetWidth;
+							completion = (delta * -1) / sliderOffsetWidth;
 						}
 
 						me.p.onDrag(completion);
