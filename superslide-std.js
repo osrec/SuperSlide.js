@@ -177,7 +177,7 @@ OSREC.superslide = function (p) {
 					me.p.content.style.transition = 'none';
 					me.p.slider.style.transition = 'none';
 
-					var sliderOffsetWidth = me.p.sliderOffsetWidth;
+					var sliderOffsetWidth = me.p.slider.offsetWidth;
 					var sliderStartPosition = me.p.isOpen ? -sliderOffsetWidth : 0;
 					var translation = 0;
 					var delta = 0;
