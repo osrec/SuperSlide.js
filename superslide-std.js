@@ -353,10 +353,8 @@ OSREC.superslide.prototype.close = function (doPartialAnimation) {
 
 OSREC.superslide.prototype.toggle = function () {
 	if (this.p.isOpen) {
-		console.log('close');
 		return this.close();
 	} else {
-		console.log('open');
 		return this.open();
 	}
 };
