@@ -4,7 +4,8 @@
   "description": "A lightweight, slick sliding menu for your next PWA by OSREC Technologies (https://osrec.co.uk)",
   "main": "superslide-std.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "uglifyjs superslide-std.js -c -m -o superslide-std.min.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/osrec/superslide.js/issues"
   },
-  "homepage": "https://github.com/osrec/superslide.js#readme"
+  "homepage": "https://github.com/osrec/superslide.js#readme",
+  "devDependencies": {
+    "uglify-es": "^3.3.9"
+  }
 }
